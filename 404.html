@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Não Encontrada | A Procópio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
+
+    <!-- Design System -->
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/components.css">
+    
+    <style>
+        body {
+            background-color: var(--c-bg);
+            color: var(--c-text);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Background elegant styling */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(197, 168, 128, 0.05) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .error-container {
+            text-align: center;
+            z-index: 2;
+            padding: var(--s-md);
+            max-width: 500px;
+            animation: fadeIn 1s var(--ease-out);
+        }
+
+        .error-logo {
+            margin-bottom: var(--s-md);
+        }
+
+        .error-code {
+            font-family: var(--f-display);
+            font-size: clamp(6rem, 15vw, 10rem);
+            line-height: 1;
+            color: var(--c-gold);
+            margin: 0;
+            font-weight: 300;
+            letter-spacing: -2px;
+            opacity: 0.85;
+        }
+
+        .error-title {
+            font-family: var(--f-display);
+            font-size: var(--t-h2);
+            font-weight: 400;
+            margin-top: 0;
+            margin-bottom: var(--s-sm);
+            color: var(--c-text);
+            letter-spacing: 1px;
+        }
+
+        .error-desc {
+            font-family: var(--f-ui);
+            font-size: var(--t-lead);
+            color: var(--c-text-muted);
+            margin-bottom: var(--s-md);
+            line-height: 1.6;
+        }
+
+        .error-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--s-xs);
+            text-decoration: none;
+            padding: 1rem 2.2rem;
+            background-color: var(--c-gold);
+            color: var(--c-bg);
+            border-radius: var(--r-sm);
+            font-family: var(--f-ui);
+            font-size: var(--t-label);
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: all var(--dur-fast) var(--ease-out);
+            border: 1px solid var(--c-gold);
+        }
+
+        .error-btn:hover {
+            background-color: transparent;
+            color: var(--c-gold);
+            box-shadow: 0 0 20px rgba(197, 168, 128, 0.2);
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="error-container">
+        <!-- Logo Central APS -->
+        <div class="error-logo">
+            <svg width="180" height="70" viewBox="0 0 220 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <text x="50%" y="60" font-family="'Cormorant Garamond', Georgia, serif" font-size="58" font-weight="400" fill="#c5a880" letter-spacing="6" text-anchor="middle">APS</text>
+                <line x1="30" y1="70" x2="190" y2="70" stroke="#c5a880" stroke-width="0.6" opacity="0.35"/>
+                <text x="50%" y="83" font-family="'Montserrat', sans-serif" font-size="7" font-weight="500" fill="#c5a880" letter-spacing="5" text-anchor="middle" opacity="0.6">BOMBINHAS</text>
+            </svg>
+        </div>
+
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title">Página Não Encontrada</h2>
+        <p class="error-desc">
+            O endereço que você tentou acessar não está disponível ou foi movido. Explore nossas coleções exclusivas a partir da página inicial.
+        </p>
+        
+        <a href="./" class="error-btn">
+            <i class="fas fa-arrow-left"></i> Voltar ao Início
+        </a>
+    </div>
+
+</body>
+</html>
