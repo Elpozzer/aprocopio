@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Segurança -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+
+    <title>A Procópio | Moda & Calçados Premium — Bombinhas SC</title>
+    <meta name="description" content="A Procópio Store e Procópio Shoes. As boutiques mais autênticas de Bombinhas/SC com moda resortwear, calçados de couro e atendimento humanizado.">
+    <meta name="keywords" content="loja de roupas bombinhas, calçados bombinhas, moda praia bombas, boutique bombinhas sc, procopio store, procopio shoes">
+    <link rel="canonical" href="https://aprocopio.com.br/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aprocopio.com.br/">
+    <meta property="og:title" content="A Procópio | Moda & Calçados Premium — Bombinhas SC">
+    <meta property="og:description" content="Boutiques A Procópio Store e Shoes em Bombinhas SC. Moda resortwear, calçados de couro e atendimento de excelência.">
+    <meta property="og:image" content="https://aprocopio.com.br/assets/images/og-share.jpg">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Google Fonts — Pré-conexão para velocidade máxima -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Ícones -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
+
+    <!-- Design System Modular -->
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/animations.css">
+</head>
+
+<body>
+
+    <!-- ============================================
+         HEADER — Centrado, refinado, blur ao rolar
+         ============================================ -->
+    <header class="site-header" id="site-header">
+        <div class="header-inner">
+
+            <!-- Nav Esquerda -->
+            <nav class="nav-left" aria-label="Menu Principal">
+                <a href="#inicio"    class="nav-link active">Início</a>
+                <a href="#lojas"     class="nav-link">Lojas</a>
+                <a href="#vitrine"   class="nav-link">Vitrine</a>
+            </nav>
+
+            <!-- Logo Central APS -->
+            <div class="logo-wrap">
+                <a href="#inicio" aria-label="A Procópio — Página Inicial">
+                    <svg class="logo-svg-mark" viewBox="0 0 220 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Monograma APS refinado com serifas -->
+                        <text x="50%" y="60"
+                              font-family="'Cormorant Garamond', Georgia, serif"
+                              font-size="58"
+                              font-weight="400"
+                              fill="#c5a880"
+                              letter-spacing="6"
+                              text-anchor="middle"
+                              dominant-baseline="auto">APS</text>
+                        <!-- Linha fina sob o monograma -->
+                        <line x1="30" y1="70" x2="190" y2="70"
+                              stroke="#c5a880" stroke-width="0.6" opacity="0.35"/>
+                        <!-- Subtítulo Bombinhas -->
+                        <text x="50%" y="83"
+                              font-family="'Montserrat', sans-serif"
+                              font-size="7"
+                              font-weight="500"
+                              fill="#c5a880"
+                              letter-spacing="5"
+                              text-anchor="middle"
+                              opacity="0.6">BOMBINHAS</text>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Nav Direita -->
+            <div class="nav-right">
+                <a href="#onde-estamos" class="nav-link">Onde Estamos</a>
+                <a href="https://www.instagram.com/aprocopiostore"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="nav-instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </div>
+
+            <!-- Botão Menu Mobile -->
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Drawer Mobile -->
+    <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true">
+        <a href="#inicio"         class="nav-link">Início</a>
+        <a href="#lojas"          class="nav-link">Lojas</a>
+        <a href="#vitrine"        class="nav-link">Vitrine</a>
+        <a href="#onde-estamos"   class="nav-link">Onde Estamos</a>
+        <a href="https://www.instagram.com/aprocopiostore"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-link" style="color: var(--c-gold);">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+    </div>
+
+    <main>
+
+        <!-- ============================================
+             HERO FULLSCREEN EDITORIAL
+             ============================================ -->
+        <section class="hero" id="inicio">
+            <div class="hero-media" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1800&auto=format&fit=crop"
+                     alt="Vista da praia de Bombinhas ao pôr do sol"
+                     loading="eager"
+                     fetchpriority="high">
+            </div>
+            <div class="hero-vignette" aria-hidden="true"></div>
+
+            <div class="hero-content">
+                <div class="hero-eyebrow">
+                    Boutique & Calçados · Bombinhas SC
+                </div>
+                <h1 class="hero-heading">
+                    O estilo que o litoral<br>
+                    <em>sempre pediu</em>
+                </h1>
+                <p class="hero-sub">
+                    Duas boutiques únicas onde moda resortwear e calçados de couro legítimo se encontram com a autenticidade do litoral catarinense.
+                </p>
+                <div class="hero-actions">
+                    <a href="#lojas" class="btn btn-gold">Explorar Coleções</a>
+                    <a href="#onde-estamos" class="btn btn-glass">Como Chegar</a>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="hero-scroll" aria-hidden="true">
+                <div class="hero-scroll-line"></div>
+                <span>Scroll</span>
+            </div>
+        </section>
+
+        <!-- ============================================
+             STRIP DE DIFERENCIAIS
+             ============================================ -->
+        <div class="about-strip" role="list">
+            <div class="about-item reveal" role="listitem">
+                <div class="about-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="about-label">2 Lojas Físicas</div>
+                <div class="about-text">Rua Tangará e Av. Fragata, no coração de Bombinhas</div>
+            </div>
+            <div class="about-item reveal reveal-delay-1" role="listitem">
+                <div class="about-icon"><i class="fas fa-moon"></i></div>
+                <div class="about-label">Aberto até 23h</div>
+                <div class="about-text">A Procópio Store atende até mais tarde para sua comodidade</div>
+            </div>
+            <div class="about-item reveal reveal-delay-2" role="listitem">
+                <div class="about-icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="about-label">Atendimento WhatsApp</div>
+                <div class="about-text">Reserve peças ou tire dúvidas diretamente com nossa equipe</div>
+            </div>
+            <div class="about-item reveal reveal-delay-3" role="listitem">
+                <div class="about-icon"><i class="fas fa-star"></i></div>
+                <div class="about-label">Tradição Local</div>
+                <div class="about-text">Referência em moda e calçados premium no litoral de SC</div>
+            </div>
+        </div>
+
+        <!-- ============================================
+             MOSAICO — SELETOR DE LOJAS
+             ============================================ -->
+        <section id="lojas" aria-label="Nossas Lojas">
+            <div class="mosaic">
+
+                <!-- Procópio Store (Roupas) -->
+                <div class="mosaic-panel" id="mosaic-store" tabindex="0" role="button"
+                     aria-label="Acessar Procópio Store - Moda">
+                    <div class="mosaic-panel-bg">
+                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1200&auto=format&fit=crop"
+                             alt="Vitrine Procópio Store - Moda Feminina e Masculina Bombinhas"
+                             loading="lazy">
+                    </div>
+                    <div class="mosaic-gradient" aria-hidden="true"></div>
+
+                    <div class="mosaic-body">
+                        <div class="status-wrap">
+                            <div id="store-status-badge" class="status-badge closed">
+                                <span class="status-dot"></span>
+                                <span>Carregando...</span>
+                            </div>
+                        </div>
+                        <div class="mosaic-store-name">Procópio Store</div>
+                        <h2 class="mosaic-headline">
+                            Moda que respira<br><em>o mar de Bombas</em>
+                        </h2>
+                        <p class="mosaic-desc">
+                            Linho, resortwear, beachwear e o melhor da moda casual de verão. Aberto até as 23h para você aproveitar a noite após um dia perfeito na praia.
+                        </p>
+                        <a href="#vitrine" class="mosaic-cta">
+                            Ver Vitrine
+                            <span class="cta-line" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Procópio Shoes (Sapatos) -->
+                <div class="mosaic-panel" id="mosaic-shoes" tabindex="0" role="button"
+                     aria-label="Acessar Procópio Shoes - Calçados">
+                    <div class="mosaic-panel-bg">
+                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=1200&auto=format&fit=crop"
+                             alt="Vitrine Procópio Shoes - Calçados Premium Bombinhas"
+                             loading="lazy">
+                    </div>
+                    <div class="mosaic-gradient" aria-hidden="true"></div>
+
+                    <div class="mosaic-body">
+                        <div class="status-wrap">
+                            <div id="shoes-status-badge" class="status-badge closed">
+                                <span class="status-dot"></span>
+                                <span>Carregando...</span>
+                            </div>
+                        </div>
+                        <div class="mosaic-store-name">Procópio Shoes</div>
+                        <h2 class="mosaic-headline">
+                            Cada passo com<br><em>leveza e elegância</em>
+                        </h2>
+                        <p class="mosaic-desc">
+                            Sandálias de couro trançado, mocassins, mules de palha e sapatênis que combinam conforto real com o estilo premium de quem vive o verão ao máximo.
+                        </p>
+                        <a href="#vitrine" class="mosaic-cta">
+                            Ver Vitrine
+                            <span class="cta-line" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================
+             LOOKBOOK — VITRINE DIGITAL
+             ============================================ -->
+        <section class="section bg-alt" id="vitrine">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">Coleção Atual</span>
+                    <h2 class="section-title">Vitrine Digital</h2>
+                    <span class="gold-line"></span>
+                </div>
+
+                <div class="lookbook-tabs" role="tablist" aria-label="Filtros de Coleção">
+                    <button class="tab-btn active" data-filter="Feminino"          role="tab" aria-selected="true">Feminino</button>
+                    <button class="tab-btn"         data-filter="Masculino"         role="tab" aria-selected="false">Masculino</button>
+                    <button class="tab-btn"         data-filter="Calçados Femininos" role="tab" aria-selected="false">Calçados Fem.</button>
+                    <button class="tab-btn"         data-filter="Calçados Masculinos" role="tab" aria-selected="false">Calçados Masc.</button>
+                </div>
+
+                <div class="lookbook-grid" id="lookbook-grid" role="list">
+                    <p class="grid-empty">Carregando vitrine...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             LOCALIZAÇÃO & ROTAS GPS
+             ============================================ -->
+        <section class="section" id="onde-estamos">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">Visite-nos</span>
+                    <h2 class="section-title">Onde Estamos</h2>
+                    <span class="gold-line"></span>
+                </div>
+
+                <div class="location-grid">
+
+                    <!-- Card Procópio Store -->
+                    <div class="location-card reveal-left">
+                        <div class="location-header">
+                            <span class="location-type">Moda · Lifestyle</span>
+                            <h3 class="location-name">A Procópio Store</h3>
+                            <div id="footer-store-badge" class="status-badge closed" style="width: fit-content; margin-top: 0.5rem;">
+                                <span class="status-dot"></span><span>Carregando...</span>
+                            </div>
+                        </div>
+
+                        <div class="location-detail">
+                            <i class="fas fa-map-marker-alt icon"></i>
+                            <span>Rua Tangará, 227 — Bairro Bombas<br>Bombinhas / SC · CEP 88215-000</span>
+                        </div>
+
+                        <div class="location-detail">
+                            <i class="fas fa-phone-alt icon"></i>
+                            <span>(48) 99802-3745</span>
+                        </div>
+
+                        <div class="location-detail">
+                            <i class="fas fa-clock icon"></i>
+                            <div>
+                                <div class="hours-grid">
+                                    <span class="hours-day">Segunda a Sábado</span>
+                                    <span class="hours-time">09h00 – 23h00</span>
+                                    <span class="hours-day">Domingo</span>
+                                    <span class="hours-time closed-day">Fechado</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="location-actions">
+                            <a href="https://maps.google.com/?q=Rua+Tangará+227+Bombinhas+SC"
+                               target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                                <i class="fas fa-directions"></i> Google Maps
+                            </a>
+                            <a href="https://waze.com/ul?q=Rua+Tangara+227+Bombinhas+SC"
+                               target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                                <i class="fab fa-waze"></i> Waze
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card Procópio Shoes -->
+                    <div class="location-card reveal-right">
+                        <div class="location-header">
+                            <span class="location-type">Calçados · Acessórios</span>
+                            <h3 class="location-name">A Procópio Shoes</h3>
+                            <div id="footer-shoes-badge" class="status-badge closed" style="width: fit-content; margin-top: 0.5rem;">
+                                <span class="status-dot"></span><span>Carregando...</span>
+                            </div>
+                        </div>
+
+                        <div class="location-detail">
+                            <i class="fas fa-map-marker-alt icon"></i>
+                            <span>Avenida Fragata, 1074 — Centro<br>Bombinhas / SC · CEP 88215-000</span>
+                        </div>
+
+                        <div class="location-detail">
+                            <i class="fas fa-phone-alt icon"></i>
+                            <span>(47) 99111-9255</span>
+                        </div>
+
+                        <div class="location-detail">
+                            <i class="fas fa-clock icon"></i>
+                            <div>
+                                <div class="hours-grid">
+                                    <span class="hours-day">Segunda a Sábado</span>
+                                    <span class="hours-time">09h00 – 19h30</span>
+                                    <span class="hours-day">Domingo</span>
+                                    <span class="hours-time closed-day">Fechado</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="location-actions">
+                            <a href="https://maps.google.com/?q=Avenida+Fragata+1074+Bombinhas+SC"
+                               target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                                <i class="fas fa-directions"></i> Google Maps
+                            </a>
+                            <a href="https://waze.com/ul?q=Avenida+Fragata+1074+Bombinhas+SC"
+                               target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                                <i class="fab fa-waze"></i> Waze
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             INSTAGRAM STRIP
+             ============================================ -->
+        <div class="insta-strip bg-alt reveal">
+            <i class="fab fa-instagram" style="font-size:1.8rem; color: var(--c-gold); opacity:0.6;"></i>
+            <a href="https://www.instagram.com/aprocopiostore"
+               target="_blank" rel="noopener noreferrer">
+                @aprocopiostore
+            </a>
+            <span class="insta-handle">Siga nossas novidades e tendências de Bombinhas</span>
+        </div>
+
+    </main>
+
+    <!-- ============================================
+         FOOTER DE GRIFE
+         ============================================ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+                    <svg viewBox="0 0 220 90" style="height:50px;width:auto;" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <text x="50%" y="60" font-family="'Cormorant Garamond', Georgia, serif" font-size="58" font-weight="400" fill="#c5a880" letter-spacing="6" text-anchor="middle">APS</text>
+                        <line x1="30" y1="70" x2="190" y2="70" stroke="#c5a880" stroke-width="0.6" opacity="0.35"/>
+                        <text x="50%" y="83" font-family="'Montserrat', sans-serif" font-size="7" font-weight="500" fill="#c5a880" letter-spacing="5" text-anchor="middle" opacity="0.6">BOMBINHAS</text>
+                    </svg>
+                    <p class="footer-tagline">
+                        Moda autêntica e calçados de excelência no paraíso do litoral catarinense.
+                    </p>
+                    <a href="https://www.instagram.com/aprocopiostore" target="_blank" rel="noopener noreferrer"
+                       style="color: var(--c-gold); font-size:0.8rem; letter-spacing:0.1em; display:flex; align-items:center; gap:0.4rem;">
+                        <i class="fab fa-instagram"></i> @aprocopiostore
+                    </a>
+                </div>
+
+                <div>
+                    <div class="footer-col-title">Procópio Store</div>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-map-marker-alt" style="opacity:0.5;width:14px;"></i> Rua Tangará, 227 — Bombas</a></li>
+                        <li><a href="#"><i class="fas fa-phone-alt" style="opacity:0.5;width:14px;"></i> (48) 99802-3745</a></li>
+                        <li><a href="#"><i class="fas fa-clock" style="opacity:0.5;width:14px;"></i> Seg–Sáb · 09h – 23h</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="footer-col-title">Procópio Shoes</div>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-map-marker-alt" style="opacity:0.5;width:14px;"></i> Av. Fragata, 1074 — Centro</a></li>
+                        <li><a href="#"><i class="fas fa-phone-alt" style="opacity:0.5;width:14px;"></i> (47) 99111-9255</a></li>
+                        <li><a href="#"><i class="fas fa-clock" style="opacity:0.5;width:14px;"></i> Seg–Sáb · 09h – 19h30</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <span class="footer-copy">&copy; 2026 A Procópio Store & Shoes — Bombinhas, SC. Todos os direitos reservados.</span>
+                <span class="footer-copy">Bombinhas · Santa Catarina · Brasil</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp FAB flutuante -->
+    <a id="wpp-fab" class="whatsapp-fab" aria-label="Falar no WhatsApp" title="Falar conosco">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Dados Estruturados JSON-LD -->
+    <script type="application/ld+json">
+    [{
+        "@context": "https://schema.org",
+        "@type": "ClothingStore",
+        "name": "A Procópio Store",
+        "url": "https://aprocopio.com.br",
+        "telephone": "+55-48-99802-3745",
+        "image": "https://aprocopio.com.br/assets/images/og-share.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Tangará, 227",
+            "addressLocality": "Bombinhas",
+            "addressRegion": "SC",
+            "postalCode": "88215-000",
+            "addressCountry": "BR"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": -27.14811, "longitude": -48.50821 },
+        "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+            "opens": "09:00", "closes": "23:00"
+        }],
+        "sameAs": "https://www.instagram.com/aprocopiostore"
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "ShoeStore",
+        "name": "A Procópio Shoes",
+        "url": "https://aprocopio.com.br",
+        "telephone": "+55-47-99111-9255",
+        "image": "https://aprocopio.com.br/assets/images/og-share.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Avenida Fragata, 1074",
+            "addressLocality": "Bombinhas",
+            "addressRegion": "SC",
+            "postalCode": "88215-000",
+            "addressCountry": "BR"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": -27.15243, "longitude": -48.51478 },
+        "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+            "opens": "09:00", "closes": "19:30"
+        }]
+    }]
+    </script>
+
+    <script type="module" src="./js/app.js"></script>
+
+    <!-- FAB WhatsApp: escolhe a loja mais próxima (Shoes encerra antes) -->
+    <script type="module">
+        import { buildSecureWhatsAppLink } from './js/security.js';
+        const fab = document.getElementById('wpp-fab');
+        if (fab) {
+            const now = new Date();
+            const hour = parseInt(now.toLocaleTimeString('pt-BR', { timeZone: 'America/Sao_Paulo', hour: '2-digit', hour12: false }));
+            const storeType = (hour >= 19 && hour < 23) ? 'store' : 'shoes';
+            const msg = 'Olá! Vi o site da Procópio e gostaria de mais informações. 😊';
+            fab.href = buildSecureWhatsAppLink(storeType, msg);
+            fab.target = '_blank';
+            fab.rel = 'noopener noreferrer';
+        }
+    </script>
+</body>
+</html>

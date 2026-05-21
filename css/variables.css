@@ -1,0 +1,68 @@
+/**
+ * Design System V2 — A Procópio
+ * Estética de Grife Internacional: Dark, Warm, Coastal Luxury
+ */
+:root {
+    /* Paleta Escura de Luxo */
+    --c-bg:          #0e0e0d;
+    --c-bg-alt:      #131210;
+    --c-surface:     #1a1916;
+    --c-surface-2:   #242220;
+    --c-border:      rgba(197, 168, 128, 0.12);
+    --c-border-hover:rgba(197, 168, 128, 0.40);
+
+    /* Dourado Procópio */
+    --c-gold:        #c5a880;
+    --c-gold-light:  #d4bfa0;
+    --c-gold-dim:    rgba(197, 168, 128, 0.08);
+    --c-gold-mid:    rgba(197, 168, 128, 0.20);
+
+    /* Texto */
+    --c-text:        #f0ede8;
+    --c-text-muted:  rgba(240, 237, 232, 0.50);
+    --c-text-faint:  rgba(240, 237, 232, 0.28);
+
+    /* Typo */
+    --f-display: 'Cormorant Garamond', Georgia, serif;
+    --f-ui:      'Montserrat', system-ui, sans-serif;
+
+    /* Escala fluida */
+    --t-hero:   clamp(3.5rem, 7vw + 1rem, 6.5rem);
+    --t-h1:     clamp(2.4rem, 4vw + 1rem, 4rem);
+    --t-h2:     clamp(1.8rem, 2.5vw + 0.5rem, 2.8rem);
+    --t-h3:     clamp(1.3rem, 1.5vw + 0.5rem, 1.8rem);
+    --t-lead:   clamp(0.9rem, 0.8vw + 0.4rem, 1.05rem);
+    --t-label:  clamp(0.65rem, 0.4vw + 0.5rem, 0.75rem);
+
+    /* Espaçamento (Golden Ratio) */
+    --s-2xs: 0.25rem;
+    --s-xs:  0.5rem;
+    --s-sm:  1rem;
+    --s-md:  2rem;
+    --s-lg:  4rem;
+    --s-xl:  7rem;
+    --s-2xl: 12rem;
+
+    /* Bordas */
+    --r-sm: 2px;
+    --r-md: 6px;
+    --r-pill: 100px;
+
+    /* Sombras */
+    --shadow-gold:  0 0 0 1px rgba(197,168,128,0.15), 0 24px 48px -12px rgba(0,0,0,0.6);
+    --shadow-card:  0 2px 40px rgba(0,0,0,0.5);
+    --shadow-deep:  0 32px 64px -16px rgba(0,0,0,0.8);
+
+    /* Vidro */
+    --glass:        blur(18px) saturate(1.4);
+    --glass-light:  blur(10px) saturate(1.2);
+    --glass-bg:     rgba(14, 14, 13, 0.82);
+    --glass-border: rgba(197, 168, 128, 0.15);
+
+    /* Transições */
+    --ease-out:  cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
+    --dur-fast:  0.25s;
+    --dur-mid:   0.5s;
+    --dur-slow:  0.85s;
+}

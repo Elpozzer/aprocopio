@@ -1,0 +1,605 @@
+/**
+ * Components V2 — A Procópio
+ * Mosaico de Grife, Status Badges, Lookbook, Cards Editoriais, Localização
+ */
+
+/* ============================================
+   MOSAICO SPLIT — Seletor de Marcas
+   ============================================ */
+.mosaic {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100svh;
+}
+
+.mosaic-panel {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    min-height: 70svh;
+}
+
+.mosaic-panel-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.mosaic-panel-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.32) saturate(0.8);
+    transition: filter var(--dur-slow) var(--ease-out),
+                transform var(--dur-slow) var(--ease-out);
+    transform-origin: center;
+}
+
+/* Gradiente lateral de separação */
+.mosaic-panel:first-child::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, var(--c-gold), transparent);
+    opacity: 0.25;
+    z-index: 2;
+}
+
+/* Gradiente vertical interno */
+.mosaic-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(14,14,13,0.95) 0%, rgba(14,14,13,0.2) 60%, transparent 100%);
+    z-index: 1;
+    transition: background var(--dur-slow) var(--ease-out);
+}
+
+/* Hover — imagem mais viva */
+.mosaic-panel:hover .mosaic-panel-bg img {
+    filter: brightness(0.45) saturate(1.1);
+    transform: scale(1.04);
+}
+
+.mosaic-panel:hover .mosaic-gradient {
+    background: linear-gradient(to top, rgba(14,14,13,0.98) 0%, rgba(14,14,13,0.35) 60%, transparent 100%);
+}
+
+/* Conteúdo */
+.mosaic-body {
+    position: relative;
+    z-index: 3;
+    padding: var(--s-xl) clamp(2rem, 5vw, 4rem);
+    padding-bottom: clamp(3rem, 6vw, 5rem);
+    transition: transform var(--dur-mid) var(--ease-out);
+}
+
+.mosaic-panel:hover .mosaic-body {
+    transform: translateY(-8px);
+}
+
+.mosaic-store-name {
+    font-family: var(--f-ui);
+    font-size: var(--t-label);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--c-gold);
+    font-weight: 500;
+    margin-bottom: var(--s-md);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.mosaic-store-name::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background: var(--c-gold);
+    opacity: 0.7;
+}
+
+.mosaic-headline {
+    font-family: var(--f-display);
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--c-text);
+    letter-spacing: -0.02em;
+    margin-bottom: var(--s-sm);
+}
+
+.mosaic-headline em {
+    font-style: italic;
+    color: var(--c-gold);
+    opacity: 0.9;
+}
+
+.mosaic-desc {
+    font-size: 0.9rem;
+    color: rgba(240, 237, 232, 0.50);
+    max-width: 380px;
+    margin-bottom: var(--s-lg);
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.mosaic-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--f-ui);
+    font-size: var(--t-label);
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--c-text);
+    transition: gap var(--dur-fast) var(--ease-out), color var(--dur-fast);
+}
+
+.mosaic-cta .cta-line {
+    width: 28px;
+    height: 1px;
+    background: var(--c-gold);
+    transition: width var(--dur-mid) var(--ease-out);
+}
+
+.mosaic-panel:hover .mosaic-cta {
+    color: var(--c-gold);
+    gap: 1.2rem;
+}
+
+.mosaic-panel:hover .mosaic-cta .cta-line {
+    width: 48px;
+}
+
+@media (max-width: 768px) {
+    .mosaic {
+        grid-template-columns: 1fr;
+    }
+    .mosaic-panel { min-height: 60svh; }
+    .mosaic-panel:first-child::after { display: none; }
+}
+
+/* ============================================
+   STATUS BADGE — Horário de Funcionamento
+   ============================================ */
+.status-wrap {
+    margin-bottom: var(--s-md);
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem 0.4rem 0.75rem;
+    border-radius: var(--r-pill);
+    font-family: var(--f-ui);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    transition: all var(--dur-fast);
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.status-badge.open {
+    background: rgba(44, 200, 100, 0.10);
+    border-color: rgba(44, 200, 100, 0.25);
+    color: #6fdc9b;
+}
+
+.status-badge.open .status-dot {
+    background: #2ec864;
+    box-shadow: 0 0 0 3px rgba(46, 200, 100, 0.20);
+    animation: statusPulse 2s ease-in-out infinite;
+}
+
+.status-badge.closed {
+    background: rgba(197, 168, 128, 0.08);
+    border-color: rgba(197, 168, 128, 0.20);
+    color: rgba(197, 168, 128, 0.75);
+}
+
+.status-badge.closed .status-dot {
+    background: var(--c-gold);
+    opacity: 0.7;
+}
+
+@keyframes statusPulse {
+    0%, 100% { box-shadow: 0 0 0 0px rgba(46, 200, 100, 0.4); }
+    50%       { box-shadow: 0 0 0 5px rgba(46, 200, 100, 0); }
+}
+
+/* ============================================
+   LOOKBOOK — Tabs + Grid Editorial
+   ============================================ */
+.lookbook-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: var(--s-lg);
+    border-bottom: 1px solid var(--c-border);
+}
+
+.tab-btn {
+    font-family: var(--f-ui);
+    font-size: var(--t-label);
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--c-text-faint);
+    background: none;
+    border: none;
+    border-bottom: 1px solid transparent;
+    padding: 0.9rem 1.75rem;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: -1px;
+    transition: color var(--dur-fast) var(--ease-out);
+}
+
+.tab-btn.active {
+    color: var(--c-gold);
+    border-bottom-color: var(--c-gold);
+}
+
+.tab-btn:hover:not(.active) {
+    color: var(--c-text-muted);
+}
+
+/* Grid Masonry-like */
+.lookbook-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--c-border);
+    transition: opacity var(--dur-mid) var(--ease-out);
+}
+
+/* Card de Produto Editorial */
+.product-card {
+    background: var(--c-surface);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-img-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 133%; /* Relação 3:4 editorial de moda */
+    overflow: hidden;
+    background: var(--c-surface-2);
+}
+
+.product-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform var(--dur-slow) var(--ease-out), filter var(--dur-slow);
+    filter: saturate(0.9) brightness(0.95);
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.06);
+    filter: saturate(1.05) brightness(1.02);
+}
+
+/* Overlay de Ação */
+.product-action-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(14, 14, 13, 0.72);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--s-sm);
+    opacity: 0;
+    transition: opacity var(--dur-mid) var(--ease-out);
+    z-index: 2;
+    padding: var(--s-md);
+}
+
+.product-card:hover .product-action-overlay {
+    opacity: 1;
+}
+
+/* Tag destaque */
+.product-badge {
+    position: absolute;
+    top: var(--s-sm);
+    left: var(--s-sm);
+    z-index: 3;
+    background: var(--c-gold);
+    color: var(--c-bg);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.7rem;
+    border-radius: var(--r-sm);
+}
+
+/* Informações do Produto */
+.product-info {
+    padding: var(--s-md) var(--s-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    background: var(--c-surface);
+    border-top: 1px solid var(--c-border);
+    flex-shrink: 0;
+}
+
+.product-brand {
+    font-family: var(--f-ui);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--c-gold);
+    font-weight: 600;
+}
+
+.product-name {
+    font-family: var(--f-display);
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--c-text);
+    letter-spacing: 0;
+}
+
+.product-tag {
+    font-size: 0.75rem;
+    color: var(--c-text-faint);
+    font-weight: 400;
+}
+
+/* Vazio */
+.grid-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: var(--s-xl);
+    color: var(--c-text-faint);
+}
+
+@media (max-width: 900px) {
+    .lookbook-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 540px) {
+    .lookbook-grid { grid-template-columns: 1fr; }
+    .tab-btn { padding: 0.9rem 1rem; }
+}
+
+/* ============================================
+   ABOUT STRIP — Linha de Diferenciais
+   ============================================ */
+.about-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1px;
+    background: var(--c-border);
+}
+
+.about-item {
+    background: var(--c-surface);
+    padding: var(--s-lg) var(--s-md);
+    text-align: center;
+    transition: background var(--dur-fast);
+}
+
+.about-item:hover {
+    background: var(--c-surface-2);
+}
+
+.about-icon {
+    font-size: 1.5rem;
+    color: var(--c-gold);
+    margin-bottom: var(--s-sm);
+    opacity: 0.8;
+}
+
+.about-label {
+    font-family: var(--f-ui);
+    font-size: var(--t-label);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--c-text);
+    margin-bottom: var(--s-xs);
+}
+
+.about-text {
+    font-size: 0.82rem;
+    color: var(--c-text-faint);
+    line-height: 1.7;
+}
+
+/* ============================================
+   LOCATION CARDS — Geolocalização Elegante
+   ============================================ */
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: var(--s-md);
+}
+
+.location-card {
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-md);
+    padding: var(--s-lg) var(--s-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-md);
+    transition: border-color var(--dur-mid) var(--ease-out),
+                box-shadow var(--dur-mid) var(--ease-out);
+}
+
+.location-card:hover {
+    border-color: var(--c-border-hover);
+    box-shadow: var(--shadow-gold);
+}
+
+.location-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-xs);
+    padding-bottom: var(--s-md);
+    border-bottom: 1px solid var(--c-border);
+}
+
+.location-type {
+    font-size: var(--t-label);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--c-gold);
+    font-weight: 600;
+    font-family: var(--f-ui);
+}
+
+.location-name {
+    font-family: var(--f-display);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--c-text);
+    line-height: 1.1;
+}
+
+.location-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    font-size: 0.875rem;
+    color: var(--c-text-muted);
+    line-height: 1.6;
+}
+
+.location-detail .icon {
+    color: var(--c-gold);
+    opacity: 0.8;
+    font-size: 0.9rem;
+    margin-top: 0.1rem;
+    flex-shrink: 0;
+    width: 16px;
+}
+
+.hours-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.3rem 1rem;
+    font-size: 0.82rem;
+}
+
+.hours-day {
+    color: var(--c-text-muted);
+}
+
+.hours-time {
+    color: var(--c-text);
+    font-weight: 500;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.hours-time.closed-day {
+    color: var(--c-text-faint);
+}
+
+.location-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    padding-top: var(--s-sm);
+    border-top: 1px solid var(--c-border);
+}
+
+.location-actions .btn {
+    padding: 0.85rem 0.5rem;
+    font-size: 0.65rem;
+}
+
+/* ============================================
+   INSTAGRAM STRIP
+   ============================================ */
+.insta-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--s-sm);
+    padding: var(--s-xl) 0;
+    text-align: center;
+}
+
+.insta-strip a {
+    color: var(--c-gold);
+    font-family: var(--f-ui);
+    font-size: var(--t-label);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: opacity var(--dur-fast);
+}
+
+.insta-strip a:hover { opacity: 0.7; }
+.insta-strip .insta-handle { font-size: 0.8rem; color: var(--c-text-faint); }
+
+/* ============================================
+   WHATSAPP FLUTUANTE
+   ============================================ */
+.whatsapp-fab {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 700;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25d366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 24px rgba(37, 211, 102, 0.35);
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: transform var(--dur-fast) var(--ease-out),
+                box-shadow var(--dur-fast);
+    cursor: pointer;
+}
+
+.whatsapp-fab:hover {
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 8px 32px rgba(37, 211, 102, 0.45);
+}
+
+@media (max-width: 768px) {
+    .location-grid { grid-template-columns: 1fr; }
+}

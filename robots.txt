@@ -1,0 +1,11 @@
+# robots.txt para A Procópio Store & Shoes
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /data/
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+
+# Mapeia o sitemap oficial
+Sitemap: https://aprocopio.com.br/sitemap.xml
