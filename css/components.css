@@ -598,30 +598,39 @@
 
 /* Minimalist Map Preview and Badges inside the Footer */
 .footer-map-wrap {
+    display: block;
+    position: relative;
     height: 110px;
     border-radius: var(--r-sm);
     overflow: hidden;
     border: 1px solid var(--c-border);
     opacity: 0.85;
-    transition: opacity var(--dur-fast), border-color var(--dur-fast);
+    transition: opacity var(--dur-fast), border-color var(--dur-fast), box-shadow var(--dur-fast);
     margin: var(--s-sm) 0;
 }
 
 .footer-map-wrap:hover {
     opacity: 1;
     border-color: var(--c-border-hover);
+    box-shadow: var(--shadow-card);
 }
 
 .footer-map-wrap iframe {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    width: 140%;
+    height: 140%;
+    top: -20%;
+    left: -20%;
     border: 0;
     filter: sepia(0.35) saturate(0.55) brightness(1.05) contrast(1.05);
-    transition: filter var(--dur-fast) var(--ease-out);
+    transition: filter var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
+    pointer-events: none;
+    will-change: transform;
 }
 
 .footer-map-wrap:hover iframe {
     filter: sepia(0.08) saturate(0.85) brightness(1.02) contrast(1.02);
+    transform: scale(1.12);
 }
 
 .footer-map-actions {
