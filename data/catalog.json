@@ -1,100 +1,160 @@
 {
-  "procobio_store": [
+  "procopio_store": [
     {
       "id": 1,
       "categoria": "Feminino",
-      "nome": "Vestido Linho Resort",
-      "marca": "Procópio Collection",
-      "imagemUrl": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=600&auto=format&fit=crop",
-      "tag": "Casual Chic"
+      "nome": "Macaquinho Perla em Chiffon",
+      "marca": "A Procópio Store",
+      "imagemUrl": "https://dcdn-us.mitiendanube.com/stores/005/147/367/products/perla-4cd75a1059f190218917741174873616-640-0.webp",
+      "linkProduto": "https://aprocopiostore.com.br/produtos/macaquinho-perla-em-chiffon/",
+      "tag": "Tamanho Único"
     },
     {
       "id": 2,
       "categoria": "Feminino",
-      "nome": "Conjunto Sedoso Brisa",
-      "marca": "Premium Beachwear",
-      "imagemUrl": "https://images.unsplash.com/photo-1618244972963-dbee1a7edc95?q=80&w=600&auto=format&fit=crop",
-      "tag": "Moda Praia"
+      "nome": "Vestido Longo Poá",
+      "marca": "A Procópio Store",
+      "imagemUrl": "https://dcdn-us.mitiendanube.com/stores/005/147/367/products/vestidopoa-0cb63f0e2149c57faf17741205507408-640-0.webp",
+      "linkProduto": "https://aprocopiostore.com.br/produtos/vestido-longo-poa/",
+      "tag": "Verão"
     },
     {
       "id": 3,
-      "categoria": "Masculino",
-      "nome": "Camisa Linho Off-White",
-      "marca": "Procópio Uomo",
-      "imagemUrl": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=600&auto=format&fit=crop",
-      "tag": "Verão Premium"
+      "categoria": "Feminino",
+      "nome": "Vestido Curto Mara",
+      "marca": "A Procópio Store",
+      "imagemUrl": "https://dcdn-us.mitiendanube.com/stores/005/147/367/products/img_7935-14993eeec28e85ef1a17749170365302-640-0.webp",
+      "linkProduto": "https://aprocopiostore.com.br/produtos/vestido-curto-mara/",
+      "tag": "Destaque"
     },
     {
       "id": 4,
-      "categoria": "Masculino",
-      "nome": "Bermuda Alfaiataria Areia",
-      "marca": "Procópio Uomo",
-      "imagemUrl": "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?q=80&w=600&auto=format&fit=crop",
-      "tag": "Estilo Resort"
+      "categoria": "Feminino",
+      "nome": "Vestido Brukki",
+      "marca": "A Procópio Store",
+      "imagemUrl": "https://dcdn-us.mitiendanube.com/stores/005/147/367/products/d6f4e62b-c1ee-4db0-a457-a99ed43c9f5b-f2ec3235f300fc706c17749160294927-640-0.webp",
+      "linkProduto": "https://aprocopiostore.com.br/produtos/vestido-brukki/",
+      "tag": "Novo"
     },
     {
       "id": 5,
       "categoria": "Feminino",
-      "nome": "Biquíni Renda Esmeralda",
-      "marca": "Sol & Mar",
-      "imagemUrl": "https://images.unsplash.com/photo-1507553532144-b9df5e38c8d1?q=80&w=600&auto=format&fit=crop",
-      "tag": "Moda Praia"
+      "nome": "Conjunto Túnica com Renda",
+      "marca": "A Procópio Store",
+      "imagemUrl": "https://dcdn-us.mitiendanube.com/stores/005/147/367/products/img_7830-6b3c185b3293ec950e17748781145347-640-0.webp",
+      "linkProduto": "https://aprocopiostore.com.br/produtos/conjunto-tunica-renda/",
+      "tag": "Resortwear"
     },
     {
       "id": 6,
+      "categoria": "Feminino",
+      "nome": "Saia Short Importada",
+      "marca": "A Procópio Store",
+      "imagemUrl": "https://dcdn-us.mitiendanube.com/stores/005/147/367/products/2240-1-efd353d486dd436ea117741206863371-640-0.webp",
+      "linkProduto": "https://aprocopiostore.com.br/produtos/saia-short-importado/",
+      "tag": "Importado"
+    },
+    {
+      "id": 7,
+      "categoria": "Feminino",
+      "nome": "Saia Jack — Couro Eco",
+      "marca": "A Procópio Store",
+      "imagemUrl": "https://dcdn-us.mitiendanube.com/stores/005/147/367/products/img_7773-ac2730bca98a0c989b17748772585188-640-0.webp",
+      "linkProduto": "https://aprocopiostore.com.br/produtos/saia-jack-couro-eco/",
+      "tag": "Couro Eco"
+    },
+    {
+      "id": 8,
+      "categoria": "Feminino",
+      "nome": "Short Clochard Couro Eco",
+      "marca": "A Procópio Store",
+      "imagemUrl": "https://dcdn-us.mitiendanube.com/stores/005/147/367/products/img_7781-eab309a07bc2e9d69517748782952089-640-0.webp",
+      "linkProduto": "https://aprocopiostore.com.br/produtos/short-clochard-couro-eco-importado/",
+      "tag": "Couro Eco"
+    },
+    {
+      "id": 9,
       "categoria": "Masculino",
-      "nome": "Bata Algodão Rústico",
-      "marca": "Procópio Uomo",
-      "imagemUrl": "https://images.unsplash.com/photo-1505022610485-0249ba5b3675?q=80&w=600&auto=format&fit=crop",
-      "tag": "Casual"
+      "nome": "Blazer com Ombreiras",
+      "marca": "A Procópio Store",
+      "imagemUrl": "https://dcdn-us.mitiendanube.com/stores/005/147/367/products/whatsapp-image-2026-03-23-at-16-14-31-a759d641d5a8711ac217742969685051-640-0.webp",
+      "linkProduto": "https://aprocopiostore.com.br/produtos/blaser-com-ombreiras/",
+      "tag": "Alfaiataria"
+    },
+    {
+      "id": 10,
+      "categoria": "Masculino",
+      "nome": "Conjunto Social com Blazer Curto",
+      "marca": "A Procópio Store",
+      "imagemUrl": "https://dcdn-us.mitiendanube.com/stores/005/147/367/products/whatsapp-image-2026-03-23-at-16-20-23-3217d36a7e3a690d1317742971947523-640-0.webp",
+      "linkProduto": "https://aprocopiostore.com.br/produtos/conjunto-social-com-blaser-curto/",
+      "tag": "Social Chic"
+    },
+    {
+      "id": 11,
+      "categoria": "Masculino",
+      "nome": "Conjunto Madame — Camisa e Calça",
+      "marca": "A Procópio Store",
+      "imagemUrl": "https://dcdn-us.mitiendanube.com/stores/005/147/367/products/img_8796-3015afe26be918ffb517756551755035-640-0.webp",
+      "linkProduto": "https://aprocopiostore.com.br/produtos/conjunto-madame-camisa-e-calca/",
+      "tag": "Destaque"
+    },
+    {
+      "id": 12,
+      "categoria": "Masculino",
+      "nome": "Macaquinho Britany",
+      "marca": "A Procópio Store",
+      "imagemUrl": "https://dcdn-us.mitiendanube.com/stores/005/147/367/products/britany-d4d15c2bc495ee493917741179445030-640-0.webp",
+      "linkProduto": "https://aprocopiostore.com.br/produtos/macaquinho-britany/",
+      "tag": "Casual Chic"
     }
   ],
   "procopio_shoes": [
     {
-      "id": 7,
+      "id": 13,
       "categoria": "Calçados Femininos",
       "nome": "Sandália Couro Trançado",
-      "marca": "Procópio Donna",
+      "marca": "Procópio Shoes",
       "imagemUrl": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=600&auto=format&fit=crop",
       "tag": "Couro Legítimo"
     },
     {
-      "id": 8,
+      "id": 14,
       "categoria": "Calçados Femininos",
       "nome": "Rasteira Dourada Riviera",
-      "marca": "Procópio Donna",
+      "marca": "Procópio Shoes",
       "imagemUrl": "https://images.unsplash.com/photo-1562273138-f46be4ebdf33?q=80&w=600&auto=format&fit=crop",
       "tag": "Estilo Verão"
     },
     {
-      "id": 9,
+      "id": 15,
       "categoria": "Calçados Masculinos",
       "nome": "Mocassim Nobuck Areia",
-      "marca": "Procópio Calzados",
+      "marca": "Procópio Shoes",
       "imagemUrl": "https://images.unsplash.com/photo-1533867617858-e7b97e060509?q=80&w=600&auto=format&fit=crop",
       "tag": "Premium Comfort"
     },
     {
-      "id": 10,
+      "id": 16,
       "categoria": "Calçados Masculinos",
       "nome": "Sapatênis Couro Marfim",
-      "marca": "Procópio Calzados",
+      "marca": "Procópio Shoes",
       "imagemUrl": "https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=600&auto=format&fit=crop",
       "tag": "Casual Urbano"
     },
     {
-      "id": 11,
+      "id": 17,
       "categoria": "Calçados Femininos",
       "nome": "Mule Linho e Palha",
-      "marca": "Procópio Donna",
+      "marca": "Procópio Shoes",
       "imagemUrl": "https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=600&auto=format&fit=crop",
       "tag": "Fibra Natural"
     },
     {
-      "id": 12,
+      "id": 18,
       "categoria": "Calçados Masculinos",
       "nome": "Alpargata Rústica Off",
-      "marca": "Procópio Calzados",
+      "marca": "Procópio Shoes",
       "imagemUrl": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=600&auto=format&fit=crop",
       "tag": "Leveza e Estilo"
     }

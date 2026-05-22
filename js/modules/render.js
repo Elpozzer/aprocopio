@@ -45,7 +45,7 @@ function render(filter) {
     if (!grid || !catalog) return;
 
     const all = [
-        ...catalog.procobio_store.map(p => ({ ...p, storeType: 'store' })),
+        ...catalog.procopio_store.map(p => ({ ...p, storeType: 'store' })),
         ...catalog.procopio_shoes.map(p => ({ ...p, storeType: 'shoes' }))
     ];
 
