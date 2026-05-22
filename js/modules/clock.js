@@ -61,10 +61,10 @@ export function initStoreClock() {
 
         if (isOpen) {
             badgeElement.className = "status-badge open";
-            badgeElement.innerHTML = `<span class="dot"></span> Aberta agora • ${closeTimeLabel}`;
+            badgeElement.innerHTML = `<span class="status-dot"></span> Aberta agora • ${closeTimeLabel}`;
         } else {
             badgeElement.className = "status-badge closed";
-            badgeElement.innerHTML = `<span class="dot"></span> Fechada no momento`;
+            badgeElement.innerHTML = `<span class="status-dot"></span> Fechada no momento`;
         }
     }
 
