@@ -76,7 +76,7 @@ function render(filter) {
                      alt="${product.nome} — ${product.marca}"
                      loading="lazy">
                 <div class="product-action-overlay">
-                    <p style="color:rgba(240,237,232,0.65);font-size:0.8rem;letter-spacing:0.1em;text-align:center;max-width:200px;">${product.nome}</p>
+                    <p style="color:var(--c-text);font-family:var(--f-display);font-size:1.1rem;letter-spacing:0.02em;text-align:center;max-width:200px;margin-bottom:var(--s-xs);font-weight:400;font-style:italic;">${product.nome}</p>
                     <a href="${wppUrl}" target="_blank" rel="noopener noreferrer"
                        class="btn btn-gold wpp-secure-btn"
                        style="font-size:0.65rem;padding:0.85rem 1.6rem;">

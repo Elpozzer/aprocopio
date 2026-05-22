@@ -32,7 +32,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    filter: brightness(0.42) saturate(0.85);
+    filter: brightness(0.92) saturate(0.95);
     transition: filter var(--dur-slow) var(--ease-out),
                 transform var(--dur-slow) var(--ease-out);
     transform-origin: center;
@@ -51,23 +51,23 @@
     z-index: 2;
 }
 
-/* Gradiente vertical interno */
+/* Gradiente vertical interno - Claro e Rosado */
 .mosaic-gradient {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(58,37,40,0.88) 0%, rgba(58,37,40,0.25) 55%, transparent 100%);
+    background: linear-gradient(to top, rgba(252, 250, 247, 0.95) 0%, rgba(252, 250, 247, 0.40) 60%, transparent 100%);
     z-index: 1;
     transition: background var(--dur-slow) var(--ease-out);
 }
 
 /* Hover — imagem mais viva */
 .mosaic-panel:hover .mosaic-panel-bg img {
-    filter: brightness(0.52) saturate(1.05);
+    filter: brightness(0.98) saturate(1.05);
     transform: scale(1.04);
 }
 
 .mosaic-panel:hover .mosaic-gradient {
-    background: linear-gradient(to top, rgba(58,37,40,0.92) 0%, rgba(58,37,40,0.35) 55%, transparent 100%);
+    background: linear-gradient(to top, rgba(252, 250, 247, 0.98) 0%, rgba(252, 250, 247, 0.50) 60%, transparent 100%);
 }
 
 /* Conteúdo */
@@ -110,20 +110,20 @@
     font-size: clamp(2.5rem, 4vw, 4rem);
     font-weight: 300;
     line-height: 1.05;
-    color: #fcfaf7;
+    color: var(--c-text);
     letter-spacing: -0.02em;
     margin-bottom: var(--s-sm);
 }
 
 .mosaic-headline em {
     font-style: italic;
-    color: var(--c-gold-light);
+    color: var(--c-gold);
     opacity: 0.95;
 }
 
 .mosaic-desc {
     font-size: 0.9rem;
-    color: rgba(252, 250, 247, 0.62);
+    color: var(--c-text-muted);
     max-width: 380px;
     margin-bottom: var(--s-lg);
     line-height: 1.8;
@@ -139,7 +139,7 @@
     font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: rgba(252, 250, 247, 0.85);
+    color: var(--c-text);
     transition: gap var(--dur-fast) var(--ease-out), color var(--dur-fast);
 }
 
