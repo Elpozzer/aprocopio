@@ -86,6 +86,8 @@
                 <i class="fas fa-bars"></i>
             </button>
         </div>
+        <!-- Barra de Progresso Luxuosa de Rolagem -->
+        <div class="header-scroll-progress"></div>
     </header>
 
     <!-- Drawer Mobile -->
@@ -395,10 +397,67 @@
         </div>
     </footer>
 
-    <!-- WhatsApp FAB flutuante -->
-    <a id="wpp-fab" class="whatsapp-fab" aria-label="Falar no WhatsApp" title="Falar conosco">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- Concierge WhatsApp Assistant Widget -->
+    <div class="concierge-widget" id="concierge-widget">
+        <!-- Floating FAB Button -->
+        <button class="whatsapp-fab" id="wpp-fab" aria-label="Abrir Concierge Procópio" title="Falar conosco">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-badge">1</span>
+        </button>
+
+        <!-- Glassmorphism Assistant Card -->
+        <div class="concierge-card" id="concierge-card">
+            <div class="concierge-header">
+                <div class="concierge-avatar">
+                    <span class="concierge-dot"></span>
+                    <i class="fas fa-gem" style="color: var(--c-gold); font-size: 0.95rem;"></i>
+                </div>
+                <div class="concierge-meta">
+                    <h4 class="concierge-title">Concierge Procópio</h4>
+                    <p class="concierge-sub">Atendimento Premium & Vendas</p>
+                </div>
+                <button class="concierge-close" id="concierge-close" aria-label="Fechar">&times;</button>
+            </div>
+            
+            <div class="concierge-body">
+                <p class="concierge-welcome">Olá! Seja bem-vinda(o). Escolha a boutique que deseja contatar no momento:</p>
+                
+                <!-- Boutique 1 -->
+                <a href="#" id="wpp-link-store" class="concierge-item" target="_blank" rel="noopener noreferrer">
+                    <div class="concierge-item-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div class="concierge-item-details">
+                        <div class="concierge-item-row">
+                            <span class="concierge-item-name">A Procópio Store</span>
+                            <span id="concierge-badge-store" class="status-dot"></span>
+                        </div>
+                        <span class="concierge-item-desc">Resortwear & Casual Chic</span>
+                    </div>
+                    <i class="fas fa-chevron-right concierge-chevron"></i>
+                </a>
+
+                <!-- Boutique 2 -->
+                <a href="#" id="wpp-link-shoes" class="concierge-item" target="_blank" rel="noopener noreferrer">
+                    <div class="concierge-item-icon">
+                        <i class="fas fa-shoe-prints"></i>
+                    </div>
+                    <div class="concierge-item-details">
+                        <div class="concierge-item-row">
+                            <span class="concierge-item-name">A Procópio Shoes</span>
+                            <span id="concierge-badge-shoes" class="status-dot"></span>
+                        </div>
+                        <span class="concierge-item-desc">Calçados de Couro Legítimo</span>
+                    </div>
+                    <i class="fas fa-chevron-right concierge-chevron"></i>
+                </a>
+            </div>
+            
+            <div class="concierge-footer">
+                <span>Bombinhas · Santa Catarina</span>
+            </div>
+        </div>
+    </div>
 
     <!-- Dados Estruturados JSON-LD -->
     <script type="application/ld+json">
@@ -451,18 +510,50 @@
 
     <script type="module" src="./js/app.js"></script>
 
-    <!-- FAB WhatsApp: escolhe a loja mais próxima (Shoes encerra antes) -->
+    <!-- Inicializador do Concierge Assistant Widget -->
     <script type="module">
         import { buildSecureWhatsAppLink } from './js/security.js';
+        
         const fab = document.getElementById('wpp-fab');
-        if (fab) {
-            const now = new Date();
-            const hour = parseInt(now.toLocaleTimeString('pt-BR', { timeZone: 'America/Sao_Paulo', hour: '2-digit', hour12: false }));
-            const storeType = (hour >= 19 && hour < 23) ? 'store' : 'shoes';
-            const msg = 'Olá! Vi o site da Procópio e gostaria de mais informações. 😊';
-            fab.href = buildSecureWhatsAppLink(storeType, msg);
-            fab.target = '_blank';
-            fab.rel = 'noopener noreferrer';
+        const card = document.getElementById('concierge-card');
+        const closeBtn = document.getElementById('concierge-close');
+        const badge = fab ? fab.querySelector('.whatsapp-badge') : null;
+        
+        const linkStore = document.getElementById('wpp-link-store');
+        const linkShoes = document.getElementById('wpp-link-shoes');
+        
+        if (fab && card) {
+            // Abre/fecha o card ao clicar no botão
+            fab.addEventListener('click', (e) => {
+                e.stopPropagation();
+                card.classList.toggle('open');
+                if (badge) {
+                    badge.style.display = 'none'; // Esconde a notificação ao clicar
+                }
+            });
+            
+            // Fecha o card ao clicar no botão de fechar
+            if (closeBtn) {
+                closeBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    card.classList.remove('open');
+                });
+            }
+            
+            // Fecha o card ao clicar fora dele
+            document.addEventListener('click', (e) => {
+                if (!card.contains(e.target) && !fab.contains(e.target)) {
+                    card.classList.remove('open');
+                }
+            });
+            
+            // Constrói os links seguros dinamicamente
+            if (linkStore) {
+                linkStore.href = buildSecureWhatsAppLink('store', 'Olá! Gostaria de conversar com a Procópio Store sobre moda e resortwear. 🌸');
+            }
+            if (linkShoes) {
+                linkShoes.href = buildSecureWhatsAppLink('shoes', 'Olá! Gostaria de conversar com a Procópio Shoes sobre calçados premium. 👞');
+            }
         }
     </script>
 </body>

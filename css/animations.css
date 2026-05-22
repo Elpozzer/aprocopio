@@ -136,3 +136,38 @@ body {
 .lookbook-grid.fading {
     opacity: 0;
 }
+
+/* ============================================
+   BARRA DE PROGRESSO DE ROLAGEM LUXUOSA
+   ============================================ */
+.header-scroll-progress {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: var(--c-gold);
+    transition: width 0.1s ease-out;
+    z-index: 10;
+    box-shadow: 0 1px 4px rgba(192, 113, 126, 0.4);
+}
+
+/* ============================================
+   REVEAL CINEMÁTICO PREMIUM (Apple/Tesla Style)
+   ============================================ */
+.reveal-premium {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    filter: blur(4px);
+    transition: 
+        opacity var(--dur-slow) var(--ease-out),
+        transform var(--dur-slow) var(--ease-out),
+        filter var(--dur-slow) var(--ease-out);
+    will-change: transform, opacity, filter;
+}
+
+.reveal-premium.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}

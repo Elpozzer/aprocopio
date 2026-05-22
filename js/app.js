@@ -3,7 +3,13 @@
  * Inicializa todos os módulos na carga da página (DOMContentLoaded)
  */
 
-import { initHeaderEffects, initScrollReveals } from './modules/animations.js';
+import { 
+    initHeaderEffects, 
+    initScrollReveals, 
+    initHeroParallax, 
+    initScrollProgress, 
+    initMagneticElements 
+} from './modules/animations.js';
 import { initStoreClock } from './modules/clock.js';
 import { initCatalogRenderer } from './modules/render.js';
 
@@ -17,8 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Inicializa efeitos visuais de rolagem (header fixo com blur) e menu responsivo
     initHeaderEffects();
 
-    // 4. Inicializa observadores de scroll (reveal fade-in)
+    // 4. Inicializa observadores de scroll (reveal fade-in padrão e premium)
     initScrollReveals();
 
-    console.log("Portal Híbrido Procópio inicializado com sucesso [UX Premium & Ofuscação de Contatos Ativos].");
+    // 5. Inicializa paralaxe cinemático no banner principal (Hero)
+    initHeroParallax();
+
+    // 6. Inicializa a barra fina de progresso de rolagem no cabeçalho
+    initScrollProgress();
+
+    // 7. Inicializa a física de cursor magnético em botões e links
+    initMagneticElements();
+
+    console.log("Portal Híbrido Procópio inicializado com sucesso [UX Premium Estilo Apple/Tesla].");
 });

@@ -3,6 +3,8 @@
  * Calcula e exibe se as lojas físicas estão abertas em tempo real,
  * travando a lógica no timezone de Brasília (America/Sao_Paulo) para evitar erros
  * com turistas vindos de outros fusos horários.
+ * 
+ * Agora alimenta também o painel dinâmico do Concierge Assistant.
  */
 
 export function initStoreClock() {
@@ -10,6 +12,10 @@ export function initStoreClock() {
     const shoesStatusBadge = document.getElementById('shoes-status-badge');
     const footerStoreBadge = document.getElementById('footer-store-badge');
     const footerShoesBadge = document.getElementById('footer-shoes-badge');
+
+    // Elementos do Concierge Widget
+    const conciergeBadgeStore = document.getElementById('concierge-badge-store');
+    const conciergeBadgeShoes = document.getElementById('concierge-badge-shoes');
 
     function updateBadges() {
         try {
@@ -35,6 +41,7 @@ export function initStoreClock() {
 
             applyStatus(storeStatusBadge, isStoreOpen, "Até 23h");
             applyStatus(footerStoreBadge, isStoreOpen, "Até 23h");
+            applyConciergeStatus(conciergeBadgeStore, isStoreOpen);
 
             // --- Lógica Procópio Shoes (Sapatos) ---
             // Aberto das 09:00 às 19:30 (Segunda a Sábado)
@@ -44,6 +51,7 @@ export function initStoreClock() {
 
             applyStatus(shoesStatusBadge, isShoesOpen, "Até 19h30");
             applyStatus(footerShoesBadge, isShoesOpen, "Até 19h30");
+            applyConciergeStatus(conciergeBadgeShoes, isShoesOpen);
 
         } catch (error) {
             console.error("Erro ao calcular status de funcionamento:", error);
@@ -66,6 +74,16 @@ export function initStoreClock() {
             badgeElement.className = "status-badge closed";
             badgeElement.innerHTML = `<span class="status-dot"></span> Fechada no momento`;
         }
+    }
+
+    /**
+     * Aplica classe de status dinâmico nos dots do Concierge Widget
+     * @param {HTMLElement} dotElement 
+     * @param {boolean} isOpen 
+     */
+    function applyConciergeStatus(dotElement, isOpen) {
+        if (!dotElement) return;
+        dotElement.className = isOpen ? "status-dot open" : "status-dot closed";
     }
 
     // Inicialização imediata e agendamento de atualização periódica a cada 30 segundos
