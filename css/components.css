@@ -32,7 +32,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    filter: brightness(0.32) saturate(0.8);
+    filter: brightness(0.42) saturate(0.85);
     transition: filter var(--dur-slow) var(--ease-out),
                 transform var(--dur-slow) var(--ease-out);
     transform-origin: center;
@@ -55,19 +55,19 @@
 .mosaic-gradient {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(14,14,13,0.95) 0%, rgba(14,14,13,0.2) 60%, transparent 100%);
+    background: linear-gradient(to top, rgba(58,37,40,0.88) 0%, rgba(58,37,40,0.25) 55%, transparent 100%);
     z-index: 1;
     transition: background var(--dur-slow) var(--ease-out);
 }
 
 /* Hover — imagem mais viva */
 .mosaic-panel:hover .mosaic-panel-bg img {
-    filter: brightness(0.45) saturate(1.1);
+    filter: brightness(0.52) saturate(1.05);
     transform: scale(1.04);
 }
 
 .mosaic-panel:hover .mosaic-gradient {
-    background: linear-gradient(to top, rgba(14,14,13,0.98) 0%, rgba(14,14,13,0.35) 60%, transparent 100%);
+    background: linear-gradient(to top, rgba(58,37,40,0.92) 0%, rgba(58,37,40,0.35) 55%, transparent 100%);
 }
 
 /* Conteúdo */
@@ -110,20 +110,20 @@
     font-size: clamp(2.5rem, 4vw, 4rem);
     font-weight: 300;
     line-height: 1.05;
-    color: var(--c-text);
+    color: #fcfaf7;
     letter-spacing: -0.02em;
     margin-bottom: var(--s-sm);
 }
 
 .mosaic-headline em {
     font-style: italic;
-    color: var(--c-gold);
-    opacity: 0.9;
+    color: var(--c-gold-light);
+    opacity: 0.95;
 }
 
 .mosaic-desc {
     font-size: 0.9rem;
-    color: rgba(240, 237, 232, 0.50);
+    color: rgba(252, 250, 247, 0.62);
     max-width: 380px;
     margin-bottom: var(--s-lg);
     line-height: 1.8;
@@ -139,7 +139,7 @@
     font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--c-text);
+    color: rgba(252, 250, 247, 0.85);
     transition: gap var(--dur-fast) var(--ease-out), color var(--dur-fast);
 }
 
@@ -196,32 +196,34 @@
     flex-shrink: 0;
 }
 
+/* Status Aberto — Sage Green da logomarca */
 .status-badge.open {
-    background: rgba(44, 200, 100, 0.10);
-    border-color: rgba(44, 200, 100, 0.25);
-    color: #6fdc9b;
+    background: rgba(74, 124, 103, 0.10);
+    border-color: rgba(74, 124, 103, 0.30);
+    color: var(--c-sage);
 }
 
 .status-badge.open .status-dot {
-    background: #2ec864;
-    box-shadow: 0 0 0 3px rgba(46, 200, 100, 0.20);
+    background: var(--c-sage);
+    box-shadow: 0 0 0 3px rgba(74, 124, 103, 0.22);
     animation: statusPulse 2s ease-in-out infinite;
 }
 
+/* Status Fechado — Dusty Rose suave */
 .status-badge.closed {
-    background: rgba(197, 168, 128, 0.08);
-    border-color: rgba(197, 168, 128, 0.20);
-    color: rgba(197, 168, 128, 0.75);
+    background: rgba(192, 113, 126, 0.07);
+    border-color: rgba(192, 113, 126, 0.22);
+    color: rgba(192, 113, 126, 0.80);
 }
 
 .status-badge.closed .status-dot {
     background: var(--c-gold);
-    opacity: 0.7;
+    opacity: 0.65;
 }
 
 @keyframes statusPulse {
-    0%, 100% { box-shadow: 0 0 0 0px rgba(46, 200, 100, 0.4); }
-    50%       { box-shadow: 0 0 0 5px rgba(46, 200, 100, 0); }
+    0%, 100% { box-shadow: 0 0 0 0px rgba(74, 124, 103, 0.40); }
+    50%       { box-shadow: 0 0 0 5px rgba(74, 124, 103, 0.00); }
 }
 
 /* ============================================
@@ -309,7 +311,7 @@
 .product-action-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(14, 14, 13, 0.72);
+    background: rgba(252, 250, 247, 0.85);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     display: flex;
@@ -352,6 +354,7 @@
     background: var(--c-surface);
     border-top: 1px solid var(--c-border);
     flex-shrink: 0;
+    box-shadow: inset 0 1px 0 var(--c-border);
 }
 
 .product-brand {
@@ -373,7 +376,7 @@
 
 .product-tag {
     font-size: 0.75rem;
-    color: var(--c-text-faint);
+    color: var(--c-text-futed);
     font-weight: 400;
 }
 
@@ -409,6 +412,7 @@
     padding: var(--s-lg) var(--s-md);
     text-align: center;
     transition: background var(--dur-fast);
+    box-shadow: inset 0 0 0 1px var(--c-border);
 }
 
 .about-item:hover {
@@ -494,14 +498,13 @@
 .location-map iframe {
     width: 100%;
     height: 100%;
-    filter: grayscale(1) invert(0.9) contrast(1.2) opacity(0.7);
-    transition: filter var(--dur-mid) var(--ease-out), opacity var(--dur-mid) var(--ease-out);
+    filter: sepia(0.35) saturate(0.55) brightness(1.05) contrast(1.05);
+    transition: filter var(--dur-mid) var(--ease-out);
     border: 0;
 }
 
 .location-card:hover .location-map iframe {
-    filter: grayscale(0.25) invert(0.9) contrast(1.1);
-    opacity: 0.95;
+    filter: sepia(0.08) saturate(0.85) brightness(1.02) contrast(1.02);
 }
 
 @media (max-width: 640px) {
@@ -625,6 +628,7 @@
 /* ============================================
    WHATSAPP FLUTUANTE
    ============================================ */
+/* WhatsApp verde cânonico mantido */
 .whatsapp-fab {
     position: fixed;
     bottom: 2rem;
@@ -639,8 +643,8 @@
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    box-shadow: 0 4px 24px rgba(37, 211, 102, 0.35);
-    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 4px 24px rgba(37, 211, 102, 0.28);
+    border: 1px solid rgba(255,255,255,0.2);
     transition: transform var(--dur-fast) var(--ease-out),
                 box-shadow var(--dur-fast);
     cursor: pointer;
@@ -648,7 +652,7 @@
 
 .whatsapp-fab:hover {
     transform: scale(1.1) translateY(-2px);
-    box-shadow: 0 8px 32px rgba(37, 211, 102, 0.45);
+    box-shadow: 0 8px 32px rgba(37, 211, 102, 0.38);
 }
 
 @media (max-width: 768px) {

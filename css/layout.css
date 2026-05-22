@@ -25,6 +25,7 @@
     backdrop-filter: var(--glass);
     -webkit-backdrop-filter: var(--glass);
     border-bottom-color: var(--glass-border);
+    box-shadow: 0 1px 32px rgba(58, 37, 40, 0.07);
     height: 66px;
 }
 
@@ -77,7 +78,7 @@
     font-weight: 500;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(240, 237, 232, 0.70);
+    color: rgba(58, 37, 40, 0.60);
     position: relative;
     padding: 0.3rem 0;
     transition: color var(--dur-fast) var(--ease-out);
@@ -157,17 +158,17 @@
     height: 100%;
     object-fit: cover;
     object-position: center 30%;
-    filter: brightness(0.35) saturate(0.85);
+    filter: brightness(0.50) saturate(0.80);
 }
 
-/* Gradiente de baixo para cima sofisticado */
+/* Gradiente rosado e suave de baixo para cima */
 .hero-vignette {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(to top,   var(--c-bg) 0%, transparent 50%),
-        linear-gradient(to right, rgba(14,14,13,0.4) 0%, transparent 60%),
-        linear-gradient(to bottom, rgba(14,14,13,0.2) 0%, transparent 30%);
+        linear-gradient(to top, var(--c-bg) 0%, rgba(252,250,247,0.55) 45%, transparent 75%),
+        linear-gradient(to right, rgba(58,37,40,0.35) 0%, transparent 55%),
+        linear-gradient(to bottom, rgba(58,37,40,0.15) 0%, transparent 30%);
     z-index: 1;
 }
 
@@ -214,11 +215,12 @@
 .hero-heading em {
     font-style: italic;
     color: var(--c-gold);
+    text-shadow: none;
 }
 
 .hero-sub {
     font-size: var(--t-lead);
-    color: rgba(240, 237, 232, 0.60);
+    color: rgba(58, 37, 40, 0.72);
     max-width: 440px;
     margin-bottom: var(--s-lg);
     font-weight: 300;
@@ -372,7 +374,7 @@
     position: fixed;
     inset: 0;
     z-index: 800;
-    background: var(--glass-bg);
+    background: rgba(252, 250, 247, 0.96);
     backdrop-filter: var(--glass);
     -webkit-backdrop-filter: var(--glass);
     display: flex;
