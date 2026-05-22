@@ -596,6 +596,47 @@
     font-size: 0.65rem;
 }
 
+/* Ajustes de refinamento para os cards de localização no rodapé */
+.footer-grid .location-card {
+    background: var(--c-surface);
+    padding: var(--s-md);
+    gap: var(--s-sm);
+    box-shadow: 0 4px 20px rgba(192, 113, 126, 0.04);
+}
+
+.footer-grid .location-name {
+    font-size: 1.45rem;
+}
+
+.footer-grid .location-header {
+    padding-bottom: var(--s-sm);
+}
+
+.footer-grid .location-map {
+    width: 150px;
+    height: 120px;
+}
+
+.footer-grid .location-detail {
+    font-size: 0.82rem;
+    gap: 0.6rem;
+}
+
+.footer-grid .location-detail .icon {
+    font-size: 0.8rem;
+    width: 12px;
+}
+
+@media (max-width: 1199px) and (min-width: 769px) {
+    .footer-grid .location-body {
+        flex-direction: column;
+    }
+    .footer-grid .location-map {
+        width: 100%;
+        height: 130px;
+    }
+}
+
 /* ============================================
    INSTAGRAM STRIP
    ============================================ */
